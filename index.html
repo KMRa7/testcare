@@ -233,7 +233,7 @@
     
 <body>
     <div class="container">
-    <h1>悠心堂 呉施術院<br>予約フォーム</h1>
+    <h1>テストサロン<br>予約フォーム</h1>
     <div class="label">お客様名</div>
     <input type="text" id="name" placeholder="お名前を入力してください">
     
@@ -297,7 +297,7 @@
         </div>
     </div>
     
-    <div class="label">お悩みの症状をお書きください</div>
+    <div class="label">メニューを選択してください</div>
     <textarea id="message" rows="4" placeholder="メッセージを入力してください"></textarea>
     
     <button class="submit-button" onclick="submitForm()">予約を行う</button>
@@ -512,11 +512,11 @@ function updateCalendar(availability, businessDays) {
     const table = calendar.querySelector('table tbody');
 
     const times = [
-        '09:00','09:30','10:00', '10:30', '11:00', '11:30',
+        '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
         '12:00', '12:30', '13:00', '13:30',
         '14:00', '14:30', '15:00', '15:30',
         '16:00', '16:30', '17:00', '17:30',
-        '18:00', '18:30', '19:00'
+        '18:00', '18:30', '19:00', '19:30','20:00',
     ];
 
     if (table.rows.length === 0) {
@@ -548,8 +548,8 @@ function updateCalendar(availability, businessDays) {
         }
     }
 
-// テーブルの内容を更新
-for (let i = 0; i < 7; i++) {
+    // テーブルの内容を更新
+    for (let i = 0; i < 7; i++) {
     const day = new Date(currentDate);
     day.setDate(day.getDate() + i);
 
