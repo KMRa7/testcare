@@ -341,12 +341,12 @@
     }
     
     function selectSymptom(button, treatmentId) {
-        const buttons = document.querySelectorAll('.symptoms button');
-        buttons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-        selectedSymptom = button.textContent;
+        const buttons = document.querySelectorAll('.symptoms button'); //ボタンの定義
+        buttons.forEach(btn => btn.classList.remove('active')); //他のボタンの押されてる状態の解除
+        button.classList.add('active'); //ボタン押されたときにactiveに
+        selectedSymptom = button.textContent; //selectedSymptom変数にボタンのテキストを代入
     
-        const treatmentText = document.getElementById('treatment-text');
+        //const treatmentText = document.getElementById('treatment-text');
         /*
         if (treatmentId === 'treatment1') {
             treatmentText.innerHTML = `<div style="text-align: right;">6,500円<br>初診料：＋2,200円</div><br>悠心堂<strong>オススメ</strong>の<strong>オーダーメイド治療</strong>です。<br>
@@ -379,7 +379,7 @@
             treatmentText.innerHTML = '';
         }
         */
-        treatmentText.style.display = treatmentId ? 'block' : 'none';
+        //treatmentText.style.display = treatmentId ? 'block' : 'none'; //treatmentIdの中身に何かある(block)ならtreatmentText要素が表示、ない(none)なら非表示
     }
 
     const repairLabel = document.getElementById('repairLabel');
